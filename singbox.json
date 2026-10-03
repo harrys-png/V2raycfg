@@ -1,0 +1,220 @@
+{
+  "log": { "level": "warn" },
+  "dns": {
+    "servers": [
+      { "tag": "cf", "address": "1.1.1.1" },
+      { "tag": "google", "address": "8.8.8.8" }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["172.19.0.1/30"],
+      "auto_route": true,
+      "strict_route": false,
+      "stack": "system",
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": ["kr", "ru", "us2", "se1", "se3", "pl", "uk", "nl1", "nl2", "lt", "de2", "de3", "fi", "ca", "at", "be", "us1", "test"],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": ["auto", "kr", "ru", "us2", "se1", "se3", "pl", "uk", "nl1", "nl2", "lt", "de2", "de3", "fi", "ca", "at", "be", "us1", "test"],
+      "default": "auto"
+    },
+    { "type": "direct", "tag": "direct" },
+
+    {
+      "type": "trojan", "tag": "kr",
+      "server": "kind-stork.rooster465.autos", "server_port": 443,
+      "password": "UX82473651",
+      "tls": { "enabled": true, "server_name": "kind-stork.rooster465.autos", "insecure": true }
+    },
+    {
+      "type": "vless", "tag": "ru",
+      "server": "185.141.227.180", "server_port": 2053,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": { "enabled": true, "server_name": "dismissaltree.net" },
+      "transport": { "type": "ws", "path": "/api/v1/upload", "headers": { "Host": "dismissaltree.net" } }
+    },
+    {
+      "type": "vless", "tag": "us2",
+      "server": "31.57.185.92", "server_port": 2083,
+      "uuid": "6096d84c-e55c-4993-912c-d5930c3a6c5e",
+      "tls": {
+        "enabled": true, "server_name": "aparat.com",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": { "enabled": true, "public_key": "A_CNV850QWW3MER4eSj3h4rdUFGGgem0lVwA5kjnnF0", "short_id": "461d" }
+      },
+      "transport": { "type": "http", "host": ["aparat.com"], "path": "/www.aparat.com/game" }
+    },
+    {
+      "type": "vless", "tag": "se1",
+      "server": "199.68.198.13", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "se3",
+      "server": "177.3.209.165", "server_port": 443,
+      "uuid": "a5dd2dd9-0995-449e-be67-4a409890dc42",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "owkd.pashalloh.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "mYtQrGiR9EkOpUsvsI7E18AWnFZZqfOPXUdpzE3luz8", "short_id": "da4d87fa" }
+      }
+    },
+    {
+      "type": "vless", "tag": "pl",
+      "server": "77.83.246.202", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "uk",
+      "server": "144.31.150.127", "server_port": 443,
+      "uuid": "7078e8e7-94d0-4736-97cd-b981419a41ef",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "t-fin1.fpradius.com",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "mXdCqI9f5K_OU_uHSm18G3hXTBS9cglSL5GMZZENdXU", "short_id": "9e12f2df4fdd9fa3" }
+      }
+    },
+    {
+      "type": "vless", "tag": "nl1",
+      "server": "94.228.160.245", "server_port": 443,
+      "uuid": "9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "nl-03-10.zetnik.site",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "BPV8HJ-kqcYDM4o7BDXDv3M9VAMWStDfXkkXmyPICWQ", "short_id": "88e13e67db3f1a32" }
+      }
+    },
+    {
+      "type": "vless", "tag": "nl2",
+      "server": "141.98.235.200", "server_port": 443,
+      "uuid": "f811a2e8-08ed-4b30-b44c-449a7cab54d8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "nlafterdate.live",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "vwwHjxmmRYqdtVvLKkMDKXi5LPVKpoLaJaA6X3OZXSI", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "lt",
+      "server": "t-lv1.fpradius.com", "server_port": 443,
+      "uuid": "7078e8e7-94d0-4736-97cd-b981419a41ef",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "t-lv1.fpradius.com",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "XShFjIHB6aMHocvqAsKgt1xWVdH4sxDdBqxi340FF1M", "short_id": "d66d7407c56ed911" }
+      }
+    },
+    {
+      "type": "vless", "tag": "de2",
+      "server": "31.76.119.123", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "de3",
+      "server": "2.58.66.143", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "fi",
+      "server": "185.242.247.44", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "ca",
+      "server": "23.95.76.164", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "ca.monkora.org",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "at",
+      "server": "87.251.69.114", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "qq" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "be",
+      "server": "144.31.219.97", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "vless", "tag": "us1",
+      "server": "216.222.201.73", "server_port": 443,
+      "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
+      "tls": {
+        "enabled": true, "server_name": "example.org",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": { "enabled": true, "public_key": "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU", "short_id": "" }
+      }
+    },
+    {
+      "type": "trojan", "tag": "test",
+      "server": "intense-sole.rooster465.autos", "server_port": 443,
+      "password": "UX82473651",
+      "tls": { "enabled": true, "server_name": "intense-sole.rooster465.autos", "insecure": true }
+    }
+  ],
+  "route": {
+    "rules": [
+      { "ip_cidr": ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.0/8"], "outbound": "direct" }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
+  }
+}
