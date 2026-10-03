@@ -20,35 +20,46 @@
   "outbounds": [
     {
       "type": "urltest",
-      "tag": "auto",
-      "outbounds": ["kr", "ru", "us2", "se1", "se3", "pl", "uk", "nl1", "nl2", "lt", "de2", "de3", "fi", "ca", "at", "be", "us1", "test"],
+      "tag": "⚡ Авто",
+      "outbounds": [
+        "🇰🇷 Корея", "🇷🇺 Россия", "🇺🇸 США-2", "🇸🇪 Швеция-1", "🇸🇪 Швеция-3",
+        "🇵🇱 Польша", "🇬🇧 Великобритания", "🇳🇱 Нидерланды-1", "🇳🇱 Нидерланды-2",
+        "🇱🇹 Литва", "🇩🇪 Германия-2", "🇩🇪 Германия-3", "🇫🇮 Финляндия",
+        "🇨🇦 Канада", "🇦🇹 Австрия", "🇧🇪 Бельгия", "🇺🇸 США-1"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
     {
       "type": "selector",
-      "tag": "proxy",
-      "outbounds": ["auto", "kr", "ru", "us2", "se1", "se3", "pl", "uk", "nl1", "nl2", "lt", "de2", "de3", "fi", "ca", "at", "be", "us1", "test"],
-      "default": "auto"
+      "tag": "🚀 Ручной",
+      "outbounds": [
+        "⚡ Авто",
+        "🇰🇷 Корея", "🇷🇺 Россия", "🇺🇸 США-2", "🇸🇪 Швеция-1", "🇸🇪 Швеция-3",
+        "🇵🇱 Польша", "🇬🇧 Великобритания", "🇳🇱 Нидерланды-1", "🇳🇱 Нидерланды-2",
+        "🇱🇹 Литва", "🇩🇪 Германия-2", "🇩🇪 Германия-3", "🇫🇮 Финляндия",
+        "🇨🇦 Канада", "🇦🇹 Австрия", "🇧🇪 Бельгия", "🇺🇸 США-1", "🧪 TEST"
+      ],
+      "default": "⚡ Авто"
     },
     { "type": "direct", "tag": "direct" },
 
     {
-      "type": "trojan", "tag": "kr",
+      "type": "trojan", "tag": "🇰🇷 Корея",
       "server": "kind-stork.rooster465.autos", "server_port": 443,
       "password": "UX82473651",
       "tls": { "enabled": true, "server_name": "kind-stork.rooster465.autos", "insecure": true }
     },
     {
-      "type": "vless", "tag": "ru",
+      "type": "vless", "tag": "🇷🇺 Россия",
       "server": "185.141.227.180", "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": { "enabled": true, "server_name": "dismissaltree.net" },
       "transport": { "type": "ws", "path": "/api/v1/upload", "headers": { "Host": "dismissaltree.net" } }
     },
     {
-      "type": "vless", "tag": "us2",
+      "type": "vless", "tag": "🇺🇸 США-2",
       "server": "31.57.185.92", "server_port": 2083,
       "uuid": "6096d84c-e55c-4993-912c-d5930c3a6c5e",
       "tls": {
@@ -59,7 +70,7 @@
       "transport": { "type": "http", "host": ["aparat.com"], "path": "/www.aparat.com/game" }
     },
     {
-      "type": "vless", "tag": "se1",
+      "type": "vless", "tag": "🇸🇪 Швеция-1",
       "server": "199.68.198.13", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -69,7 +80,7 @@
       }
     },
     {
-      "type": "vless", "tag": "se3",
+      "type": "vless", "tag": "🇸🇪 Швеция-3",
       "server": "177.3.209.165", "server_port": 443,
       "uuid": "a5dd2dd9-0995-449e-be67-4a409890dc42",
       "flow": "xtls-rprx-vision",
@@ -80,7 +91,7 @@
       }
     },
     {
-      "type": "vless", "tag": "pl",
+      "type": "vless", "tag": "🇵🇱 Польша",
       "server": "77.83.246.202", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -90,7 +101,7 @@
       }
     },
     {
-      "type": "vless", "tag": "uk",
+      "type": "vless", "tag": "🇬🇧 Великобритания",
       "server": "144.31.150.127", "server_port": 443,
       "uuid": "7078e8e7-94d0-4736-97cd-b981419a41ef",
       "flow": "xtls-rprx-vision",
@@ -101,7 +112,7 @@
       }
     },
     {
-      "type": "vless", "tag": "nl1",
+      "type": "vless", "tag": "🇳🇱 Нидерланды-1",
       "server": "94.228.160.245", "server_port": 443,
       "uuid": "9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc",
       "flow": "xtls-rprx-vision",
@@ -112,7 +123,7 @@
       }
     },
     {
-      "type": "vless", "tag": "nl2",
+      "type": "vless", "tag": "🇳🇱 Нидерланды-2",
       "server": "141.98.235.200", "server_port": 443,
       "uuid": "f811a2e8-08ed-4b30-b44c-449a7cab54d8",
       "flow": "xtls-rprx-vision",
@@ -123,7 +134,7 @@
       }
     },
     {
-      "type": "vless", "tag": "lt",
+      "type": "vless", "tag": "🇱🇹 Литва",
       "server": "t-lv1.fpradius.com", "server_port": 443,
       "uuid": "7078e8e7-94d0-4736-97cd-b981419a41ef",
       "flow": "xtls-rprx-vision",
@@ -134,7 +145,7 @@
       }
     },
     {
-      "type": "vless", "tag": "de2",
+      "type": "vless", "tag": "🇩🇪 Германия-2",
       "server": "31.76.119.123", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -144,7 +155,7 @@
       }
     },
     {
-      "type": "vless", "tag": "de3",
+      "type": "vless", "tag": "🇩🇪 Германия-3",
       "server": "2.58.66.143", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -154,7 +165,7 @@
       }
     },
     {
-      "type": "vless", "tag": "fi",
+      "type": "vless", "tag": "🇫🇮 Финляндия",
       "server": "185.242.247.44", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -164,7 +175,7 @@
       }
     },
     {
-      "type": "vless", "tag": "ca",
+      "type": "vless", "tag": "🇨🇦 Канада",
       "server": "23.95.76.164", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -174,7 +185,7 @@
       }
     },
     {
-      "type": "vless", "tag": "at",
+      "type": "vless", "tag": "🇦🇹 Австрия",
       "server": "87.251.69.114", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -184,7 +195,7 @@
       }
     },
     {
-      "type": "vless", "tag": "be",
+      "type": "vless", "tag": "🇧🇪 Бельгия",
       "server": "144.31.219.97", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -194,7 +205,7 @@
       }
     },
     {
-      "type": "vless", "tag": "us1",
+      "type": "vless", "tag": "🇺🇸 США-1",
       "server": "216.222.201.73", "server_port": 443,
       "uuid": "454431fc-71e2-42b1-b375-5b55dd06666a",
       "tls": {
@@ -204,7 +215,7 @@
       }
     },
     {
-      "type": "trojan", "tag": "test",
+      "type": "trojan", "tag": "🧪 TEST",
       "server": "intense-sole.rooster465.autos", "server_port": 443,
       "password": "UX82473651",
       "tls": { "enabled": true, "server_name": "intense-sole.rooster465.autos", "insecure": true }
@@ -214,7 +225,7 @@
     "rules": [
       { "ip_cidr": ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.0/8"], "outbound": "direct" }
     ],
-    "final": "proxy",
+    "final": "🚀 Ручной",
     "auto_detect_interface": true
   }
 }
