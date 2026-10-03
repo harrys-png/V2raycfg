@@ -1,0 +1,333 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: false
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+
+proxies:
+  - name: "🇰🇷 Корея | SharkNet"
+    type: trojan
+    server: kind-stork.rooster465.autos
+    port: 443
+    password: UX82473651
+    sni: kind-stork.rooster465.autos
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇷🇺 Россия | SharkNet"
+    type: vless
+    server: 185.141.227.180
+    port: 2053
+    uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
+    tls: true
+    servername: dismissaltree.net
+    network: ws
+    ws-opts:
+      path: "/api/v1/upload"
+      headers:
+        Host: dismissaltree.net
+    client-fingerprint: random
+    udp: true
+
+  - name: "🇺🇸 США-2 | SharkNet"
+    type: vless
+    server: 31.57.185.92
+    port: 2083
+    uuid: 6096d84c-e55c-4993-912c-d5930c3a6c5e
+    tls: true
+    servername: aparat.com
+    reality-opts:
+      public-key: A_CNV850QWW3MER4eSj3h4rdUFGGgem0lVwA5kjnnF0
+      short-id: "461d"
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+
+  - name: "🇸🇪 Швеция-1 | SharkNet"
+    type: vless
+    server: 199.68.198.13
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇵🇱 Польша | SharkNet"
+    type: vless
+    server: 77.83.246.202
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇬🇧 Великобритания | SharkNet"
+    type: vless
+    server: 144.31.150.127
+    port: 443
+    uuid: 7078e8e7-94d0-4736-97cd-b981419a41ef
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: t-fin1.fpradius.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: mXdCqI9f5K_OU_uHSm18G3hXTBS9cglSL5GMZZENdXU
+      short-id: "9e12f2df4fdd9fa3"
+
+  - name: "🇳🇱 Нидерланды-1 | SharkNet"
+    type: vless
+    server: 94.228.160.245
+    port: 443
+    uuid: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: nl-03-10.zetnik.site
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: BPV8HJ-kqcYDM4o7BDXDv3M9VAMWStDfXkkXmyPICWQ
+      short-id: "88e13e67db3f1a32"
+
+  - name: "🇳🇱 Нидерланды-2 | SharkNet"
+    type: vless
+    server: 141.98.235.200
+    port: 443
+    uuid: f811a2e8-08ed-4b30-b44c-449a7cab54d8
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: nlafterdate.live
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: vwwHjxmmRYqdtVvLKkMDKXi5LPVKpoLaJaA6X3OZXSI
+      short-id: ""
+
+  - name: "🇱🇹 Литва | SharkNet"
+    type: vless
+    server: t-lv1.fpradius.com
+    port: 443
+    uuid: 7078e8e7-94d0-4736-97cd-b981419a41ef
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: t-lv1.fpradius.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: XShFjIHB6aMHocvqAsKgt1xWVdH4sxDdBqxi340FF1M
+      short-id: "d66d7407c56ed911"
+
+  - name: "🇸🇪 Швеция-3 | SharkNet"
+    type: vless
+    server: 177.3.209.165
+    port: 443
+    uuid: a5dd2dd9-0995-449e-be67-4a409890dc42
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: owkd.pashalloh.org
+    client-fingerprint: random
+    reality-opts:
+      public-key: mYtQrGiR9EkOpUsvsI7E18AWnFZZqfOPXUdpzE3luz8
+      short-id: "da4d87fa"
+
+  - name: "🇩🇪 Германия-2 | SharkNet"
+    type: vless
+    server: 31.76.119.123
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇫🇮 Финляндия | SharkNet"
+    type: vless
+    server: 185.242.247.44
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇩🇪 Германия-3 | SharkNet"
+    type: vless
+    server: 2.58.66.143
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇨🇦 Канада | SharkNet"
+    type: vless
+    server: 23.95.76.164
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: ca.monkora.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇦🇹 Австрия | SharkNet"
+    type: vless
+    server: 87.251.69.114
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: qq
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇧🇪 Бельгия | SharkNet"
+    type: vless
+    server: 144.31.219.97
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇺🇸 США-1 | SharkNet"
+    type: vless
+    server: 216.222.201.73
+    port: 443
+    uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+    network: tcp
+    tls: true
+    udp: true
+    servername: example.org
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+      short-id: ""
+
+  - name: "🇳🇱 Нидерланды-5 | SharkNet"
+    type: vless
+    server: waysi-production-f38f.up.railway.app
+    port: 443
+    uuid: d0543afa-6272-45ab-888a-ed9a966baaf8
+    network: ws
+    tls: true
+    udp: true
+    servername: waysi-production-f38f.up.railway.app
+    client-fingerprint: ios
+    ws-opts:
+      path: "/ws/d0543afa-6272-45ab-888a-ed9a966baaf8"
+      headers:
+        Host: waysi-production-f38f.up.railway.app
+
+  - name: "🧪 TEST | SharkNet"
+    type: trojan
+    server: intense-sole.rooster465.autos
+    port: 443
+    password: UX82473651
+    sni: intense-sole.rooster465.autos
+    skip-cert-verify: true
+    udp: true
+
+proxy-groups:
+  - name: "⚡ Авто"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇰🇷 Корея | SharkNet"
+      - "🇷🇺 Россия | SharkNet"
+      - "🇺🇸 США-2 | SharkNet"
+      - "🇸🇪 Швеция-1 | SharkNet"
+      - "🇸🇪 Швеция-3 | SharkNet"
+      - "🇵🇱 Польша | SharkNet"
+      - "🇬🇧 Великобритания | SharkNet"
+      - "🇳🇱 Нидерланды-1 | SharkNet"
+      - "🇳🇱 Нидерланды-2 | SharkNet"
+      - "🇳🇱 Нидерланды-5 | SharkNet"
+      - "🇱🇹 Литва | SharkNet"
+      - "🇩🇪 Германия-2 | SharkNet"
+      - "🇩🇪 Германия-3 | SharkNet"
+      - "🇫🇮 Финляндия | SharkNet"
+      - "🇨🇦 Канада | SharkNet"
+      - "🇦🇹 Австрия | SharkNet"
+      - "🇧🇪 Бельгия | SharkNet"
+      - "🇺🇸 США-1 | SharkNet"
+      - "🧪 TEST | SharkNet"
+
+  - name: "🚀 Ручной"
+    type: select
+    proxies:
+      - "⚡ Авто"
+      - "🇰🇷 Корея | SharkNet"
+      - "🇷🇺 Россия | SharkNet"
+      - "🇺🇸 США-2 | SharkNet"
+      - "🇸🇪 Швеция-1 | SharkNet"
+      - "🇸🇪 Швеция-3 | SharkNet"
+      - "🇵🇱 Польша | SharkNet"
+      - "🇬🇧 Великобритания | SharkNet"
+      - "🇳🇱 Нидерланды-1 | SharkNet"
+      - "🇳🇱 Нидерланды-2 | SharkNet"
+      - "🇳🇱 Нидерланды-5 | SharkNet"
+      - "🇱🇹 Литва | SharkNet"
+      - "🇩🇪 Германия-2 | SharkNet"
+      - "🇩🇪 Германия-3 | SharkNet"
+      - "🇫🇮 Финляндия | SharkNet"
+      - "🇨🇦 Канада | SharkNet"
+      - "🇦🇹 Австрия | SharkNet"
+      - "🇧🇪 Бельгия | SharkNet"
+      - "🇺🇸 США-1 | SharkNet"
+      - "🧪 TEST | SharkNet"
+
+rules:
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,⚡ Авто
