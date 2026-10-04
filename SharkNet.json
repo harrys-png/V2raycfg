@@ -23,10 +23,11 @@
       "tag": "SharkNet",
       "outbounds": [
         "🇰🇷 Корея", "🇷🇺 Россия", "🇺🇸 США-2", "🇸🇪 Швеция-1", "🇸🇪 Швеция-3",
-        "🇵🇱 Польша", "🇬🇧 Великобритания", "🇳🇱 Нидерланды-1", "🇳🇱 Нидерланды-2",
+        "🇵🇱 Польша", "🇬🇧 Великобритания-1", "🇳🇱 Нидерланды-1", "🇳🇱 Нидерланды-2",
         "🇱🇹 Литва", "🇩🇪 Германия-2", "🇩🇪 Германия-3", "🇫🇮 Финляндия",
         "🇨🇦 Канада", "🇦🇹 Австрия", "🇧🇪 Бельгия", "🇺🇸 США-1", "🧪 TEST",
-        "❓ Сервер-1", "❓ Сервер-2", "❓ Сервер-3", "🇺🇸 США-3"
+        "🇳🇱 Нидерланды-3", "🇬🇧 Великобритания-2", "🇹🇷 Турция", "🇱🇻 Латвия",
+        "🇺🇸 США-3", "🇮🇷 Иран-2", "❓ TR-27", "🇮🇷 Иран-3"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -90,7 +91,7 @@
       }
     },
     {
-      "type": "vless", "tag": "🇬🇧 Великобритания",
+      "type": "vless", "tag": "🇬🇧 Великобритания-1",
       "server": "144.31.150.127", "server_port": 443,
       "uuid": "7078e8e7-94d0-4736-97cd-b981419a41ef",
       "flow": "xtls-rprx-vision",
@@ -209,9 +210,8 @@
       "password": "UX82473651",
       "tls": { "enabled": true, "server_name": "intense-sole.rooster465.autos", "insecure": true }
     },
-
     {
-      "type": "vless", "tag": "❓ Сервер-1",
+      "type": "vless", "tag": "🇳🇱 Нидерланды-3",
       "server": "2.26.20.71", "server_port": 8343,
       "uuid": "e19b5aa3-16c9-435a-8bc9-76f2f6ddff43",
       "flow": "xtls-rprx-vision",
@@ -222,7 +222,7 @@
       }
     },
     {
-      "type": "vless", "tag": "❓ Сервер-2",
+      "type": "vless", "tag": "🇬🇧 Великобритания-2",
       "server": "45.86.159.61", "server_port": 8443,
       "uuid": "63e9c63d-fd57-4b72-84a0-29ea421a0555",
       "flow": "xtls-rprx-vision",
@@ -233,7 +233,7 @@
       }
     },
     {
-      "type": "vless", "tag": "❓ Сервер-3",
+      "type": "vless", "tag": "🇹🇷 Турция",
       "server": "188.132.174.125", "server_port": 5589,
       "uuid": "bf155a74-0560-46ff-ba40-9c8d34917f0e",
       "tls": {
@@ -243,7 +243,7 @@
       }
     },
     {
-      "type": "vless", "tag": "❓ Сервер-4",
+      "type": "vless", "tag": "🇱🇻 Латвия",
       "server": "185.236.22.34", "server_port": 443,
       "uuid": "d6bd3ec0-84f5-4df3-bd5a-ef69469ce642",
       "flow": "xtls-rprx-vision",
@@ -258,6 +258,32 @@
       "server": "20.238.125.195", "server_port": 443,
       "method": "chacha20-ietf-poly1305",
       "password": "Qr3RLHJLngbplPWd"
+    },
+    {
+      "type": "shadowsocks", "tag": "🇮🇷 Иран-2",
+      "server": "api.tr.faz11.ir", "server_port": 2020,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "Ioihl2Z5XfYH7k3E3EKUvA==:JAb2C3KERjFlPISX5VbB6w=="
+    },
+    {
+      "type": "trojan", "tag": "❓ TR-27",
+      "server": "meet-goshawk.rooster465.autos", "server_port": 443,
+      "password": "UX82473651",
+      "tls": { "enabled": true, "server_name": "meet-goshawk.rooster465.autos", "insecure": true }
+    },
+    {
+      "type": "vless", "tag": "🇮🇷 Иран-3",
+      "server": "ghatem.color-shop.ir", "server_port": 443,
+      "uuid": "fdc1206a-9d2e-42b7-b615-9ccea8cf70ee",
+      "tls": {
+        "enabled": true, "server_name": "vox-cdn.com",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": {
+          "enabled": true,
+          "public_key": "PeS4xF85yQ_eE-gqFBQnq2ylysTtQIx5D6HZNyQJS1w",
+          "short_id": "9f5a01a37505cf29"
+        }
+      }
     }
   ],
   "route": {
