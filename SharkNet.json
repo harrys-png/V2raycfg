@@ -29,8 +29,10 @@
         "🇨🇦 Канада", "🇦🇹 Австрия", "🇧🇪 Бельгия", "🇺🇸 США-1",
         "🇳🇱 Нидерланды-3", "🇬🇧 Великобритания-2", "🇹🇷 Турция",
         "🇱🇻 Латвия", "🇺🇸 США-3", "🇺🇸 США-Нью-Йорк", "🇹🇷 Турция-Стамбул",
-        "🇷🇺 Россия-Москва", "🇨🇿 Чехия", "🇨🇳 Китай", "🇺🇸 США-Railway",
-        "🧪 TEST 2"
+        "🇷🇺 Россия-Москва", "🇨🇿 Чехия", "🇨🇳 Китай", "🇳🇱 Нидерланды-Railway",
+        "🧪 TEST 2", "🇮🇪 Ирландия", "🇩🇪 Германия-6", "🇦🇪 ОАЭ",
+        "🇳🇱 Нидерланды-6", "🇩🇪 Германия-7", "🇱🇹 Литва-2", "🇯🇵 Япония",
+        "🇫🇮 Финляндия-2", "🇬🇧 Лондон"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -341,7 +343,7 @@
       }
     },
     {
-      "type": "vless", "tag": "🇺🇸 США-Railway",
+      "type": "vless", "tag": "🇳🇱 Нидерланды-Railway",
       "server": "jinx80080-production.up.railway.app", "server_port": 443,
       "uuid": "4109e97b-8738-4656-a156-2b7723175bd6",
       "tls": { "enabled": true, "server_name": "jinx80080-production.up.railway.app" },
@@ -364,6 +366,110 @@
           "public_key": "S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4",
           "short_id": ""
         }
+      }
+    },
+    {
+      "type": "trojan", "tag": "🇮🇪 Ирландия",
+      "server": "sacred-anemone.rooster465.autos", "server_port": 443,
+      "password": "UX82473651",
+      "tls": { "enabled": true, "server_name": "sacred-anemone.rooster465.autos", "insecure": true }
+    },
+    {
+      "type": "vless", "tag": "🇩🇪 Германия-6",
+      "server": "151.101.215.120", "server_port": 443,
+      "uuid": "3b0637f3-916e-470c-aa32-2e2b2b0de1b9",
+      "tls": {
+        "enabled": true, "server_name": "accounts.fastly.com"
+      },
+      "transport": {
+        "type": "http",
+        "host": ["ovd13.global.ssl.fastly.net"],
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless", "tag": "🇦🇪 ОАЭ",
+      "server": "122.8.45.4", "server_port": 8443,
+      "uuid": "2d24e797-ec6c-0808-dd31-9cd22b5dfdc7",
+      "tls": {
+        "enabled": true, "server_name": "www.canon.com",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": {
+          "enabled": true,
+          "public_key": "iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "type": "vless", "tag": "🇳🇱 Нидерланды-6",
+      "server": "nl-2.srv.dvzh.net", "server_port": 443,
+      "uuid": "91344c03-b37f-42c5-90f1-cbb95c5cf256",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "nl-2.srv.dvzh.net",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": {
+          "enabled": true,
+          "public_key": "9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0",
+          "short_id": "e0ccc8c2f487d913"
+        }
+      }
+    },
+    {
+      "type": "vless", "tag": "🇩🇪 Германия-7",
+      "server": "de-1.srv.dvzh.net", "server_port": 443,
+      "uuid": "91344c03-b37f-42c5-90f1-cbb95c5cf256",
+      "tls": {
+        "enabled": true, "server_name": "de-1.srv.dvzh.net",
+        "alpn": ["h2"],
+        "utls": { "enabled": true, "fingerprint": "firefox" }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/upload/session",
+        "headers": { "Host": "de-1.srv.dvzh.net" }
+      }
+    },
+    {
+      "type": "vless", "tag": "🇱🇹 Литва-2",
+      "server": "188.225.25.142", "server_port": 443,
+      "uuid": "7610be85-9855-4010-8929-ce16d4993969",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true, "server_name": "prime.betust.net",
+        "utls": { "enabled": true, "fingerprint": "firefox" },
+        "reality": {
+          "enabled": true,
+          "public_key": "SxbaWzlvE_HQqqsA4PNX2PFcSYXTVE2nZlgLc7cPOgk",
+          "short_id": "8681edc9"
+        }
+      }
+    },
+    {
+      "type": "trojan", "tag": "🇯🇵 Япония",
+      "server": "dynamic-imp.rooster465.autos", "server_port": 443,
+      "password": "UX82473651",
+      "tls": { "enabled": true, "server_name": "dynamic-imp.rooster465.autos", "insecure": true }
+    },
+    {
+      "type": "shadowsocks", "tag": "🇫🇮 Финляндия-2",
+      "server": "185.103.110.68", "server_port": 18283,
+      "method": "aes-128-gcm",
+      "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
+    },
+    {
+      "type": "vless", "tag": "🇬🇧 Лондон",
+      "server": "direct3.freelauner.ir", "server_port": 443,
+      "uuid": "3355693c-c5e4-46e2-80e9-b399dff2fc35",
+      "transport": {
+        "type": "http",
+        "host": ["play.google.com"],
+        "path": "/"
       }
     }
   ],
