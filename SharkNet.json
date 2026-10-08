@@ -32,7 +32,8 @@
         "🇷🇺 Россия-Москва", "🇨🇿 Чехия", "🇨🇳 Китай", "🇳🇱 Нидерланды-Railway",
         "🧪 TEST 2", "🇮🇪 Ирландия", "🇩🇪 Германия-6", "🇦🇪 ОАЭ",
         "🇳🇱 Нидерланды-6", "🇩🇪 Германия-7", "🇱🇹 Литва-2", "🇯🇵 Япония",
-        "🇫🇮 Финляндия-2", "🇬🇧 Лондон"
+        "🇫🇮 Финляндия-2", "🇬🇧 Лондон", "🇩🇪 Германия-8", "🇩🇪 Германия-9",
+        "🇩🇪 Германия-10", "🇧🇬 Болгария"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -378,14 +379,8 @@
       "type": "vless", "tag": "🇩🇪 Германия-6",
       "server": "151.101.215.120", "server_port": 443,
       "uuid": "3b0637f3-916e-470c-aa32-2e2b2b0de1b9",
-      "tls": {
-        "enabled": true, "server_name": "accounts.fastly.com"
-      },
-      "transport": {
-        "type": "http",
-        "host": ["ovd13.global.ssl.fastly.net"],
-        "path": "/"
-      }
+      "tls": { "enabled": true, "server_name": "accounts.fastly.com" },
+      "transport": { "type": "http", "host": ["ovd13.global.ssl.fastly.net"], "path": "/" }
     },
     {
       "type": "vless", "tag": "🇦🇪 ОАЭ",
@@ -400,10 +395,7 @@
           "short_id": ""
         }
       },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
+      "transport": { "type": "grpc", "service_name": "TunService" }
     },
     {
       "type": "vless", "tag": "🇳🇱 Нидерланды-6",
@@ -429,11 +421,7 @@
         "alpn": ["h2"],
         "utls": { "enabled": true, "fingerprint": "firefox" }
       },
-      "transport": {
-        "type": "ws",
-        "path": "/upload/session",
-        "headers": { "Host": "de-1.srv.dvzh.net" }
-      }
+      "transport": { "type": "ws", "path": "/upload/session", "headers": { "Host": "de-1.srv.dvzh.net" } }
     },
     {
       "type": "vless", "tag": "🇱🇹 Литва-2",
@@ -466,10 +454,55 @@
       "type": "vless", "tag": "🇬🇧 Лондон",
       "server": "direct3.freelauner.ir", "server_port": 443,
       "uuid": "3355693c-c5e4-46e2-80e9-b399dff2fc35",
+      "transport": { "type": "http", "host": ["play.google.com"], "path": "/" }
+    },
+    {
+      "type": "vless", "tag": "🇩🇪 Германия-8",
+      "server": "141.98.7.193", "server_port": 2053,
+      "uuid": "e9e60f73-1618-491c-a85b-477bdc959ae6",
+      "tls": { "enabled": true, "utls": { "enabled": true, "fingerprint": "firefox" } }
+    },
+    {
+      "type": "vless", "tag": "🇩🇪 Германия-9",
+      "server": "195.26.26.172", "server_port": 1819,
+      "uuid": "5770d87a-78ec-4241-9972-b8acc774f62d",
+      "tls": {
+        "enabled": true, "server_name": "sj.sls.diginoisb.ir",
+        "alpn": ["h2", "http/1.1"],
+        "utls": { "enabled": true, "fingerprint": "chrome" }
+      },
       "transport": {
-        "type": "http",
-        "host": ["play.google.com"],
-        "path": "/"
+        "type": "ws",
+        "path": "/skskwvelzbavh",
+        "headers": { "Host": "sj.sls.diginoisb.ir" }
+      }
+    },
+    {
+      "type": "vless", "tag": "🇩🇪 Германия-10",
+      "server": "141.98.7.193", "server_port": 8443,
+      "uuid": "e9e60f73-1618-491c-a85b-477bdc959ae6",
+      "tls": {
+        "enabled": true, "server_name": "141.98.7.193",
+        "utls": { "enabled": true, "fingerprint": "firefox" }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-cdn1-vless",
+        "headers": { "Host": "de.fastmirror-labs.xyz" }
+      }
+    },
+    {
+      "type": "vless", "tag": "🇧🇬 Болгария",
+      "server": "62.133.63.124", "server_port": 443,
+      "uuid": "86b6c7ba-d613-4567-962a-acfdad5c22db",
+      "tls": {
+        "enabled": true, "server_name": "0gltyawm4dbxby5k6kw-3d2475.arta-ts.workers.dev",
+        "utls": { "enabled": true, "fingerprint": "chrome" }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": { "Host": "0gltyawm4dbxby5k6kw-3d2475.arta-ts.workers.dev" }
       }
     }
   ],
