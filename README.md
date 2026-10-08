@@ -8,7 +8,7 @@ A personal subscription with free VLESS / Trojan / Shadowsocks servers. One prof
 
 Add this link to your client as a Subscription URL:
 
-https://raw.githubusercontent.com/harrys-png/V2raycfg/main/singbox.json
+https://raw.githubusercontent.com/harrys-png/V2raycfg/main/SharkNet.json
 
 Use the raw link, not the GitHub page.
 
@@ -37,27 +37,29 @@ In Hiddify you'll see it as lowest or balance — that's Hiddify's own balancer,
 
 | Flag | Country | Servers |
 |------|---------|---------|
-| 🇩🇪 | Germany | 5 |
+| 🇩🇪 | Germany | 7 |
 | 🇺🇸 | USA | 4 |
-| 🇳🇱 | Netherlands | 3 |
-| 🇸🇪 | Sweden | 2 |
+| 🇳🇱 | Netherlands | 6 |
+| 🇬🇧 | UK | 3 |
 | 🇹🇷 | Turkey | 3 |
-| 🇬🇧 | UK | 2 |
+| 🇸🇪 | Sweden | 2 |
 | 🇷🇺 | Russia | 2 |
+| 🇱🇹 | Lithuania | 2 |
+| 🇫🇮 | Finland | 2 |
 | 🇰🇷 | Korea | 1 |
 | 🇵🇱 | Poland | 1 |
-| 🇱🇹 | Lithuania | 1 |
-| 🇫🇮 | Finland | 1 |
 | 🇨🇦 | Canada | 1 |
 | 🇦🇹 | Austria | 1 |
 | 🇧🇪 | Belgium | 1 |
 | 🇱🇻 | Latvia | 1 |
 | 🇨🇿 | Czechia | 1 |
 | 🇨🇳 | China | 1 |
-| 🇮🇷 | Iran | 1 |
+| 🇦🇪 | UAE | 1 |
+| 🇮🇪 | Ireland | 1 |
+| 🇯🇵 | Japan | 1 |
 | 🧪 | Test | 2 |
 
-Total: 32 servers in auto-selection.
+Total: 41 servers in auto-selection.
 
 ## ⚠️ Warning
 
